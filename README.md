@@ -1,89 +1,91 @@
-README – Excel Formula Functions Workbook
-Overview
+📘 Overview
 
-This workbook demonstrates the usage of commonly used Microsoft Excel formulas for performing calculations, logical operations, text manipulation, and data analysis. Each worksheet contains sample data and examples to help users understand how these functions work in real-world scenarios.
+This Excel Practice Assignment is designed to help learners understand and apply commonly used Excel formulas and text functions. The exercises cover basic mathematical functions, logical functions, conditional calculations, and text manipulation techniques.
 
-Functions Covered
+🎯 Learning Objectives
+
+By completing this assignment, you will learn how to:
+
+Perform basic calculations using Excel functions.
+Analyze data using statistical functions.
+Apply logical conditions with the IF function.
+Use conditional aggregation functions.
+Extract and manipulate text from cells.
+📋 Functions Covered
 1. SUM()
 
-Purpose: Adds all numbers in a specified range.
+Adds a range of numbers.
 
 Syntax:
 
-=SUM(range)
+=SUM(number1, [number2], ...)
 
 Example:
 
 =SUM(B2:B10)
-2. MIN()
 
-Purpose: Returns the smallest value in a range.
+Returns the total of values from cells B2 to B10.
 
-Syntax:
+2. COUNT()
 
-=MIN(range)
-
-Example:
-
-=MIN(B2:B10)
-3. MAX()
-
-Purpose: Returns the largest value in a range.
+Counts the number of cells containing numeric values.
 
 Syntax:
 
-=MAX(range)
-
-Example:
-
-=MAX(B2:B10)
-4. COUNT()
-
-Purpose: Counts the number of cells containing numeric values.
-
-Syntax:
-
-=COUNT(range)
+=COUNT(value1, [value2], ...)
 
 Example:
 
 =COUNT(B2:B10)
-5. AVERAGE()
 
-Purpose: Calculates the arithmetic mean of a set of numbers.
+Returns the count of numeric entries in the range.
+
+3. AVERAGE()
+
+Calculates the arithmetic mean of a range of numbers.
 
 Syntax:
 
-=AVERAGE(range)
+=AVERAGE(number1, [number2], ...)
 
 Example:
 
 =AVERAGE(B2:B10)
-6. AVERAGEIF()
 
-Purpose: Calculates the average of cells that meet a specified condition.
+Returns the average value of the selected range.
 
-Syntax:
+4. MIN()
 
-=AVERAGEIF(range, criteria, average_range)
-
-Example:
-
-=AVERAGEIF(A2:A10,"Sales",B2:B10)
-7. AVERAGEIFS()
-
-Purpose: Calculates the average of cells that satisfy multiple conditions.
+Returns the smallest value in a range.
 
 Syntax:
 
-=AVERAGEIFS(average_range, criteria_range1, criteria1, ...)
+=MIN(number1, [number2], ...)
 
 Example:
 
-=AVERAGEIFS(C2:C20,A2:A20,"Sales",B2:B20,"East")
-8. IF()
+=MIN(B2:B10)
 
-Purpose: Performs a logical test and returns one value if TRUE and another if FALSE.
+Returns the minimum value.
+
+5. MAX()
+
+Returns the largest value in a range.
+
+Syntax:
+
+=MAX(number1, [number2], ...)
+
+Example:
+
+=MAX(B2:B10)
+
+Returns the maximum value.
+
+🔍 Logical Function
+6. IF()
+
+Performs a logical test and returns different values based on the result.
 
 Syntax:
 
@@ -92,20 +94,27 @@ Syntax:
 Example:
 
 =IF(B2>=50,"Pass","Fail")
-9. SUMIF()
 
-Purpose: Adds values that meet a specific condition.
+Returns "Pass" if the value in B2 is 50 or greater; otherwise returns "Fail".
+
+📊 Conditional Functions
+7. SUMIF()
+
+Adds values that meet a specified condition.
 
 Syntax:
 
-=SUMIF(range, criteria, sum_range)
+=SUMIF(range, criteria, [sum_range])
 
 Example:
 
-=SUMIF(A2:A10,"Sales",B2:B10)
-10. COUNTIF()
+=SUMIF(C2:C10,"Sales",B2:B10)
 
-Purpose: Counts cells that meet a specified condition.
+Adds values in B2:B10 where the corresponding cell in C2:C10 equals "Sales".
+
+8. COUNTIF()
+
+Counts cells that meet a specified condition.
 
 Syntax:
 
@@ -113,81 +122,77 @@ Syntax:
 
 Example:
 
-=COUNTIF(A2:A10,"Sales")
-11. RIGHT()
+=COUNTIF(C2:C10,"Sales")
 
-Purpose: Extracts a specified number of characters from the right side of a text string.
+Counts the number of cells containing "Sales".
+
+✍️ Text Functions
+9. LEFT()
+
+Extracts a specified number of characters from the beginning of a text string.
 
 Syntax:
 
-=RIGHT(text, num_chars)
+=LEFT(text, [num_chars])
+
+Example:
+
+=LEFT(A2,3)
+
+Returns the first 3 characters from cell A2.
+
+10. RIGHT()
+
+Extracts a specified number of characters from the end of a text string.
+
+Syntax:
+
+=RIGHT(text, [num_chars])
 
 Example:
 
 =RIGHT(A2,4)
-12. UPPER()
 
-Purpose: Converts text to uppercase.
+Returns the last 4 characters from cell A2.
 
-Syntax:
+11. MID()
 
-=UPPER(text)
-
-Example:
-
-=UPPER(A2)
-13. LOWER()
-
-Purpose: Converts text to lowercase.
+Extracts a specific number of characters from the middle of a text string.
 
 Syntax:
 
-=LOWER(text)
+=MID(text, start_num, num_chars)
 
 Example:
 
-=LOWER(A2)
-Sample Data
-Department	Region	Sales	Employee ID
-Sales	East	5000	EMP1001
-Sales	West	4500	EMP1002
-HR	East	3000	EMP1003
-Finance	South	5500	EMP1004
-Sample Formulas
-=SUM(C2:C5)
-=MIN(C2:C5)
-=MAX(C2:C5)
-=COUNT(C2:C5)
-=AVERAGE(C2:C5)
-=AVERAGEIF(A2:A5,"Sales",C2:C5)
-=AVERAGEIFS(C2:C5,A2:A5,"Sales",B2:B5,"East")
-=IF(C2>4000,"High","Low")
-=SUMIF(A2:A5,"Sales",C2:C5)
-=COUNTIF(A2:A5,"Sales")
-=RIGHT(D2,4)
-=UPPER(A2)
-=LOWER(A2)
-Learning Objectives
+=MID(A2,3,5)
 
-By using this workbook, users will be able to:
+Returns 5 characters starting from the 3rd character in A2.
 
-Perform basic mathematical calculations.
-Analyze data using conditional functions.
-Apply logical tests with IF statements.
-Count and summarize data based on criteria.
-Manipulate text using string functions.
-Improve spreadsheet productivity and reporting skills.
-Requirements
-Microsoft Excel 2016 or later
-Basic understanding of spreadsheet concepts
-Version Information
+📝 Assignment Tasks
+Create a dataset containing:
+Employee Name
+Department
+Salary
+Performance Score
+Apply:
+SUM() to calculate total salary.
+COUNT() to count employees.
+AVERAGE() to find average salary.
+MIN() and MAX() to identify lowest and highest salaries.
+Use:
+IF() to classify employees as Eligible or Not Eligible based on performance score.
+Apply:
+SUMIF() to calculate total salary by department.
+COUNTIF() to count employees in a specific department.
+Use:
+LEFT(), RIGHT(), and MID() to extract portions of employee IDs or names.
+✅ Expected Outcome
 
-Workbook Name: Excel Formula Functions Practice Workbook
-Version: 1.0
-Purpose: Learning and demonstration of fundamental Excel formulas
-Last Updated: February 2026
+After completing this assignment, you will be able to:
 
-Notes
-All formulas are provided with sample data for easy understanding.
-Users are encouraged to modify the sample data and experiment with different inputs to observe formula behavior.
-Ensure that cell references are updated appropriately when applying formulas to different datasets.
+Perform mathematical and statistical calculations.
+Apply logical decision-making formulas.
+Generate conditional summaries.
+Manipulate and extract text efficiently.
+Build a strong foundation in Excel data analysis.
